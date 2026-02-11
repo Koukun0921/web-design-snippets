@@ -1,0 +1,77 @@
+@use "foundation" as *;
+
+.p-mv {
+  position: relative;
+  background-color: #e1e1e1;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.p-mv__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.p-mv__content {
+  width: 100%;
+  max-width: prem(560);
+  flex-shrink: 0;
+}
+
+.p-mv__title {
+  font-weight: $medium;
+  font-size: prem(54);
+  line-height: 1.2;
+  @include mq("md") {
+    font-size: prem(32);
+  }
+}
+
+.p-mv__text {
+  margin-top: prem(24);
+  font-size: prem(18);
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-mv__button {
+  margin-top: prem(48);
+  display: block;
+  padding: prem(12) prem(24);
+  width: fit-content;
+  text-align: center;
+  font-weight: $medium;
+  font-size: prem(21);
+  color: $color-white;
+  background-color: $main-color;
+  border-radius: prem(5);
+  @include mq(md) {
+    margin-top: prem(40);
+    margin-inline: auto;
+  }
+}
+
+.p-mv__figure {
+  width: 100%;
+  max-width: prem(644);
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.p-mv__figure img {
+  width: 100%;
+  aspect-ratio: 644 / 920;
+  border-radius: prem(8);
+  object-fit: cover;
+}

@@ -1,0 +1,48 @@
+@use "foundation" as *;
+
+.p-cta-first {
+  padding: prem(80) 0;
+  background-color: $color-white;
+  @include mq(md) {
+    padding: prem(60) 0;
+  }
+}
+
+.p-cta-first__inner {
+  text-align: center;
+}
+
+.p-cta-first__heading {
+  font-weight: $medium;
+  font-size: prem(52);
+  line-height: 1.25;
+  letter-spacing: 0.028em;
+  @include mq(md) {
+    font-size: prem(24);
+  }
+}
+
+.p-cta-first__description {
+  margin-top: prem(24);
+  font-size: prem(18);
+  line-height: 1.55;
+  @include mq(md) {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-cta-first__button {
+  margin-top: prem(32);
+  margin-inline: auto;
+  display: inline-block;
+  padding: prem(12) prem(24);
+  text-align: center;
+  font-weight: $medium;
+  color: $color-white;
+  background-color: $main-color;
+  border-radius: prem(5);
+  @include mq(md) {
+    margin-top: prem(24);
+  }
+}

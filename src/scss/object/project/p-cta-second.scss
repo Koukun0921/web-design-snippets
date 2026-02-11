@@ -1,0 +1,77 @@
+@use "foundation" as *;
+
+.p-cta-second {
+  padding: prem(120) 0;
+  overflow: hidden;
+  position: relative;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-cta-second__deco {
+  position: absolute;
+  pointer-events: none;
+  &--right {
+    top: 0;
+    right: prem(-40);
+    width: prem(330);
+    @include mq("md") {
+      width: prem(200);
+    }
+  }
+  &--left {
+    bottom: prem(50);
+    left: prem(10);
+    width: prem(230);
+    @include mq("md") {
+      bottom: 0;
+      left: 0;
+      width: prem(160);
+    }
+  }
+}
+
+.p-cta-second__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.p-cta-second__heading {
+  font-weight: $bold;
+  font-size: prem(48);
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  @include mq("md") {
+    font-size: prem(28);
+    letter-spacing: 0;
+  }
+}
+
+.p-cta-second__description {
+  margin-top: prem(24);
+  font-size: prem(18);
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-cta-second__actions {
+  margin-top: prem(56);
+  @include mq("md") {
+    margin-top: prem(40);
+  }
+}
+
+.p-cta-second__button {
+  display: inline-block;
+  padding: prem(12) prem(24);
+  font-weight: $medium;
+  color: $color-white;
+  background-color: $main-color;
+  border: 1px solid #000;
+  border-radius: prem(5);
+  text-align: center;
+}

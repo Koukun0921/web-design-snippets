@@ -1,0 +1,108 @@
+@use "foundation" as *;
+
+.p-service {
+  padding: prem(120) 0;
+  background-color: $sub-color;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-service__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-service__content {
+  margin-top: prem(80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: prem(70);
+  @include mq("md") {
+    margin-top: prem(40);
+    flex-direction: column;
+    gap: prem(40);
+  }
+}
+
+.p-service__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.p-service__button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: prem(460);
+}
+
+.p-service__button a {
+  display: block;
+  padding: prem(22) prem(25);
+  font-weight: $medium;
+  font-size: prem(24);
+  line-height: 1.25;
+  color: $color-white;
+  width: 100%;
+  border: 1px solid $accent-color;
+  background-color: #5882c7;
+  border-radius: prem(5);
+  text-align: center;
+  @include mq(md) {
+    padding: prem(16) prem(20);
+    font-size: prem(20);
+    width: 100%;
+  }
+}
+
+.p-service__list {
+  margin-top: prem(32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: prem(32);
+  width: 100%;
+  max-width: prem(400);
+  @include mq(md) {
+    margin-top: prem(24);
+    gap: prem(24);
+  }
+}
+
+.p-service__item {
+  padding: prem(10) prem(20);
+  font-size: prem(20);
+  color: #475569;
+  text-align: center;
+  background-color: $color-white;
+  border-radius: prem(5);
+  width: 100%;
+  @include mq("md") {
+    font-size: prem(16);
+  }
+}
+
+.p-service__img {
+  margin-inline: auto;
+  width: 100%;
+  max-width: prem(576);
+  flex-shrink: 0;
+  @include mq(md) {
+    max-width: prem(400);
+  }
+}
+
+.p-service__img img {
+  width: 100%;
+  aspect-ratio: 576 / 535;
+  object-fit: contain;
+}

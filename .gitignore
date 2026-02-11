@@ -1,0 +1,23 @@
+# git対象としないファイル、フォルダを記載する
+
+node_modules
+gulp/node_modules
+gulp/package-lock.json
+
+# Figma MCP 関連
+FigmaMCPcoding-md-FLOCSS-WP用/
+
+.vscode/
+# Mac
+.DS_Store
+__MACOSX
+thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

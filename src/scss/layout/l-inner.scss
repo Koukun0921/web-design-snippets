@@ -1,0 +1,13 @@
+@use 'foundation' as *;
+
+.l-inner {
+    margin-inline: auto;
+    padding: 0 $padding-pc;
+    width: 100%;
+    max-width: calc(prem(1280) + $padding-pc * 2);
+
+    @include mq("md") {
+        padding: 0 $padding-sp;
+        max-width: calc(prem(600) + $padding-sp * 2);
+    }
+}

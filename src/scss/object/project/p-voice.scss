@@ -1,0 +1,76 @@
+@use "foundation" as *;
+
+.p-voice {
+  padding: prem(120) 0;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-voice__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-voice__list {
+  margin-top: prem(68);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: prem(80);
+  @include mq("md") {
+    margin-top: prem(56);
+    grid-template-columns: minmax(0, 1fr);
+    gap: prem(60);
+  }
+}
+
+.p-voice__item {
+  position: relative;
+  padding: prem(20) prem(30);
+  border-radius: prem(5);
+  box-shadow: prem(3) prem(5) prem(15) rgba(0, 0, 0, 0.2);
+  @include mq(md) {
+    padding: prem(40) prem(10) prem(16);
+  }
+}
+
+.p-voice__item-img {
+  position: absolute;
+  top: 0;
+  left: prem(24);
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: prem(70);
+  flex-shrink: 0;
+  @include mq(md) {
+    left: prem(16);
+    max-width: prem(60);
+  }
+}
+
+.p-voice__item-img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.p-voice__role {
+  font-size: prem(18);
+  color: #475569;
+  text-align: center;
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}
+
+.p-voice__text {
+  margin-top: prem(16);
+  @include mq("md") {
+    font-size: prem(14);
+  }
+}

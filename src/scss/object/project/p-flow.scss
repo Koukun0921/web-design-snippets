@@ -1,0 +1,131 @@
+@use "foundation" as *;
+
+.p-flow {
+  padding: prem(120) 0;
+  background-color: $color-white;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-flow__inner {
+  margin-inline: auto;
+  padding: $padding-pc;
+  width: 100%;
+  max-width: calc(prem(768) + $padding-pc * 2);
+  @include mq("md") {
+    padding: $padding-sp;
+    max-width: calc(prem(600) + $padding-sp * 2);
+  }
+}
+
+.p-flow__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-flow__list {
+  margin-top: prem(80);
+  padding-top: prem(16);
+  position: relative;
+  padding-left: prem(80);
+  &::before {
+    content: "";
+    position: absolute;
+    left: prem(15);
+    top: 0;
+    bottom: 0;
+    width: prem(3);
+    background-color: #000;
+  }
+  @include mq("md") {
+    margin-top: prem(40);
+    padding-left: prem(20);
+    &::before {
+      left: prem(4);
+    }
+  }
+}
+
+.p-flow__item {
+  position: relative;
+  padding: prem(32);
+  background-color: $sub-color;
+  border: 1px solid #000;
+  &::before {
+    content: "";
+    position: absolute;
+    top: prem(24);
+    left: prem(-72);
+    width: prem(15);
+    height: prem(31);
+    background-color: $color-white;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: prem(-72);
+    top: prem(32);
+    width: prem(15);
+    height: prem(15);
+    border-radius: 50%;
+    background-color: #000;
+  }
+  @include mq("md") {
+    padding: prem(16);
+    &::before {
+      top: prem(16.5);
+      left: prem(-23);
+      height: prem(25);
+    }
+    &::after {
+      left: prem(-21.5);
+      top: prem(24);
+      width: prem(10);
+      height: prem(10);
+    }
+  }
+}
+
+.p-flow__item + .p-flow__item {
+  margin-top: prem(48);
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-flow__step-num {
+  display: block;
+  font-family: $font-family-en;
+  font-weight: $bold;
+  font-size: prem(40);
+  line-height: 1.2;
+  color: #475569;
+  @include mq("md") {
+    font-size: prem(24);
+  }
+}
+
+.p-flow__heading {
+  margin-top: prem(16);
+  font-weight: $medium;
+  font-size: prem(32);
+  line-height: 1.3;
+  @include mq("md") {
+    margin-top: prem(12);
+    font-size: prem(20);
+  }
+}
+
+.p-flow__text {
+  margin-top: prem(32);
+  font-size: prem(18);
+  @include mq("md") {
+    margin-top: prem(24);
+    font-size: prem(16);
+  }
+}

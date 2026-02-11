@@ -1,0 +1,68 @@
+@use "foundation" as *;
+
+.p-plan {
+  padding: prem(120) 0;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-plan__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-plan__table-wrapper {
+  margin-top: prem(80);
+  overflow-x: auto;
+  @include mq("md") {
+    margin-top: prem(40);
+  }
+}
+
+.p-plan__table {
+  width: 100%;
+  border-collapse: collapse;
+  @include mq("md") {
+    min-width: prem(900);
+  }
+}
+
+.p-plan__th {
+  padding: prem(24) prem(26);
+  background-color: $main-color;
+  font-weight: $bold;
+  font-size: prem(20);
+  color: $color-white;
+  text-align: center;
+  @include mq("md") {
+    padding: prem(16) prem(12);
+    font-size: prem(18);
+  }
+}
+
+.p-plan__row {
+  background-color: #e1e1e1;
+}
+
+.p-plan__td {
+  padding: prem(16) prem(24);
+  font-weight: $bold;
+  color: #475569;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  @include mq("md") {
+    padding: prem(14) prem(12);
+    font-size: prem(14);
+  }
+  &--feature {
+    font-weight: $medium;
+    color: $text-color;
+    text-align: left;
+  }
+}

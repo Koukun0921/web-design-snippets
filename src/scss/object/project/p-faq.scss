@@ -1,0 +1,104 @@
+@use "foundation" as *;
+
+.p-faq {
+  padding: prem(120) 0;
+  background-color: $color-white;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-faq__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-faq__columns {
+  margin-top: prem(80);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: prem(16);
+  @include mq("md") {
+    margin-top: prem(40);
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.p-faq__column {
+  display: flex;
+  flex-direction: column;
+  gap: prem(16);
+}
+
+.p-faq__question {
+  display: flex;
+  align-items: center;
+  gap: prem(24);
+  padding: prem(20) prem(24);
+  background-color: $main-color;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  @include mq(md) {
+    padding: prem(18) prem(16);
+    gap: prem(10);
+  }
+  .p-faq__item:nth-child(even) & {
+    background-color: #475569;
+  }
+}
+
+.p-faq__question-text {
+  flex: 1;
+  font-weight: $bold;
+  font-size: prem(18);
+  color: $color-white;
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}
+
+.p-faq__icon {
+  position: relative;
+  width: prem(24);
+  height: prem(24);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: prem(14);
+    height: prem(2);
+    background-color: $color-white;
+  }
+  &::before {
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .p-faq__item.is-open & {
+    transform: rotate(45deg);
+  }
+}
+
+.p-faq__answer {
+  display: none;
+  padding: prem(20) prem(24);
+  background-color: $sub-color;
+  @include mq(md) {
+    padding: prem(16);
+  }
+  p {
+    @include mq("md") {
+      font-size: prem(14);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "sass:math";
+
+$break-flg: 1 !default; //0:SPファースト、1：PCファースト
+
+$breakpoints: null;
+
+@if $break-flg ==0 {
+  $breakpoints: (
+    "sm": "screen and (min-width: 400px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 1000px)",
+    "xl": "screen and (min-width: 1200px)",
+  );
+}
+
+@else {
+  $breakpoints: (
+    "sm": "screen and (max-width: 399px)",
+    "md": "screen and (max-width: 767px)",
+    "lg": "screen and (max-width: 999px)",
+    "xl": "screen and (max-width: 1199px)",
+  );
+}
+
+// inner
+$inner: 1200px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+
+// フォント
+$font-family-base: 'Noto Sans JP', sans-serif;
+$font-family-en: 'Inter', sans-serif;
+
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// ベースフォントサイズ
+$base-font-size: 16px;
+
+// カラー
+$main-color: #0F172A;
+$sub-color: #E2E8F0;
+$accent-color: #3B82F6;
+$text-color: #0F172A;
+$color-white: #FFFFFF;
+$color-gray: #94A3B8;

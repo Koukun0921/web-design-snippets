@@ -1,0 +1,88 @@
+// CTA回転
+@keyframes cta-rotate-right {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cta-rotate-left {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.p-cta-second__deco.p-cta-second__deco--right {
+  animation: cta-rotate-right 30s linear infinite;
+}
+
+.p-cta-second__deco.p-cta-second__deco--left {
+  animation: cta-rotate-left 15s linear 4s infinite;
+}
+
+// フェードイン
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p-cta-first__inner,
+.c-section-title,
+.p-cta-second__inner,
+.p-problem__item,
+.p-reason__subtitle,
+.p-reason__content,
+.p-voice__subtitle,
+.p-voice__item,
+.p-service__subtitle,
+.p-service__content,
+.p-plan__subtitle,
+.p-plan__table-wrapper,
+.p-flow__subtitle,
+.p-flow__list,
+.p-price__subtitle,
+.p-price__card,
+.p-price__option,
+.p-price__cta,
+.p-trust__subtitle,
+.p-trust__card,
+.p-faq__subtitle,
+.p-faq__item {
+  opacity: 0;
+}
+
+.p-cta-first__inner.is-active,
+.c-section-title.is-active,
+.p-cta-second__inner.is-active,
+.p-problem__item.is-active,
+.p-reason__subtitle.is-active,
+.p-reason__content.is-active,
+.p-voice__subtitle.is-active,
+.p-voice__item.is-active,
+.p-service__subtitle.is-active,
+.p-service__content.is-active,
+.p-plan__subtitle.is-active,
+.p-plan__table-wrapper.is-active,
+.p-flow__subtitle.is-active,
+.p-flow__list.is-active,
+.p-price__subtitle.is-active,
+.p-price__card.is-active,
+.p-price__option.is-active,
+.p-price__cta.is-active,
+.p-trust__subtitle.is-active,
+.p-trust__card.is-active,
+.p-faq__subtitle.is-active,
+.p-faq__item.is-active {
+  animation: fadeIn 0.3s ease-out forwards;
+}

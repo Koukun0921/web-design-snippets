@@ -1,0 +1,35 @@
+@use 'foundation' as *;
+
+.c-section-title {
+    text-align: center;
+    font-weight: $medium;
+    font-size: prem(48);
+    line-height: 1.2;
+    letter-spacing: 0.024em;
+
+    @include mq("md") {
+        font-size: prem(24);
+    }
+
+    &::before {
+        content: attr(data-sub);
+        margin-bottom: prem(16);
+        display: block;
+        font-family: $font-family-en;
+        font-weight: $bold;
+        font-size: prem(16);
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #475569;
+        text-transform: capitalize;
+
+        @include mq(md) {
+            margin-bottom: prem(12);
+            font-size: prem(14);
+        }
+    }
+}
+
+.c-section-title.c-section-title--left {
+    text-align-last: left;
+}

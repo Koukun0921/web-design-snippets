@@ -1,0 +1,225 @@
+@use "foundation" as *;
+
+.p-price {
+  padding: prem(120) 0;
+  @include mq("md") {
+    padding: prem(80) 0;
+  }
+}
+
+.p-price__subtitle {
+  margin-top: prem(24);
+  font-size: prem(18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(20);
+    font-size: prem(16);
+  }
+}
+
+.p-price__cards {
+  margin-top: prem(80);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: prem(32);
+  @include mq("md") {
+    margin-top: prem(40);
+    grid-template-columns: minmax(0, 1fr);
+    gap: prem(40);
+  }
+}
+
+.p-price__card {
+  position: relative;
+  padding: prem(40) prem(32);
+  border: 2px solid $sub-color;
+  border-radius: prem(10);
+  background-color: rgba($sub-color, 0.5);
+  text-align: center;
+  @include mq(md) {
+    padding: prem(40) prem(16);
+  }
+}
+
+.p-price__card--featured {
+  background-color: $color-white;
+  border: 1px solid $color-gray;
+  box-shadow: 0 0 prem(13) $color-gray;
+}
+
+.p-price__card-badge {
+  position: absolute;
+  top: prem(-33);
+  left: prem(8);
+  width: 100%;
+  max-width: prem(128);
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    aspect-ratio: 128 / 96;
+    object-fit: contain;
+  }
+  @include mq(md) {
+    max-width: prem(110);
+  }
+}
+
+.p-price__card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: prem(4);
+}
+
+.p-price__plan-name {
+  font-family: $font-family-en;
+  font-weight: $bold;
+  font-size: prem(32);
+  line-height: 1.4;
+  @include mq(md) {
+    font-size: prem(28);
+  }
+}
+
+.p-price__plan-badge {
+  width: 100%;
+  max-width: prem(300);
+  padding: prem(2) prem(20);
+  font-size: prem(18);
+  color: $color-white;
+  background-color: $main-color;
+  border-radius: calc(infinity * 1px);
+  @include mq("md") {
+    font-size: prem(16);
+  }
+}
+
+.p-price__card-price {
+  margin-top: prem(30);
+  font-family: $font-family-en;
+  font-weight: $bold;
+  line-height: 1.2;
+  color: #475569;
+  text-align: center;
+  @include mq(md) {
+    margin-top: prem(24);
+  }
+}
+
+.p-price__amount {
+  font-size: prem(56);
+  @include mq("md") {
+    font-size: prem(44);
+  }
+}
+
+.p-price__yen,
+.p-price__tax {
+  font-size: prem(35);
+  @include mq("md") {
+    font-size: prem(28);
+  }
+}
+
+.p-price__divider {
+  margin: prem(30) 0;
+  border: none;
+  border-top: 1px solid #000;
+  @include mq(md) {
+    margin: prem(24) 0;
+  }
+}
+
+.p-price__features {
+  padding: prem(8) prem(20);
+  text-align: left;
+  display: inline-flex;
+  flex-direction: column;
+  gap: prem(16);
+  @include mq("md") {
+    padding: 0 prem(16);
+    gap: prem(12);
+  }
+}
+
+.p-price__feature {
+  position: relative;
+  padding-left: prem(30);
+  color: #000;
+  &::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #000;
+    font-weight: $bold;
+  }
+  @include mq(md) {
+    padding-left: prem(24);
+  }
+}
+
+.p-price__notes {
+  text-align: left;
+  padding: prem(8) prem(30);
+  color: #000;
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-price__option {
+  margin-top: prem(32);
+  padding: prem(20) prem(32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $sub-color;
+  border: 1px solid $sub-color;
+  line-height: 1.2;
+  color: #475569;
+  @include mq("md") {
+    padding: prem(20) prem(16);
+    flex-direction: column;
+    gap: prem(16);
+    text-align: center;
+  }
+}
+
+.p-price__option-label {
+  font-weight: $medium;
+  font-size: prem(20);
+  flex-shrink: 0;
+  @include mq("md") {
+    font-size: prem(18);
+  }
+}
+
+.p-price__option-detail {
+  font-size: prem(18);
+  @include mq("md") {
+    font-size: prem(16);
+  }
+}
+
+.p-price__cta {
+  margin-top: prem(32);
+  text-align: center;
+  @include mq(md) {
+    margin-top: prem(24);
+  }
+}
+
+.p-price__button {
+  display: inline-block;
+  padding: prem(12) prem(24);
+  font-weight: $bold;
+  font-size: prem(24);
+  color: $color-white;
+  background-color: $accent-color;
+  border-radius: prem(20);
+  box-shadow: 0 prem(4) prem(4) rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+  max-width: prem(372);
+}

@@ -1,0 +1,67 @@
+@use "foundation" as *;
+
+.p-problem {
+  padding: prem(120) 0 prem(160);
+  background: linear-gradient(
+    180deg,
+    rgba(226, 232, 240, 1) 0%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 1) 85%,
+    rgba(226, 232, 240, 1) 100%
+  );
+  @include mq("md") {
+    padding: prem(80) 0;
+    background: linear-gradient(
+      180deg,
+      rgba(226, 232, 240, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 1) 90%,
+      rgba(226, 232, 240, 1) 100%
+    );
+  }
+}
+
+.p-problem__list {
+  margin-top: prem(156);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: prem(32) prem(24);
+  list-style: none;
+  @include mq("md") {
+    margin-top: prem(40);
+    grid-template-columns: repeat(2, 1fr);
+    gap: prem(24) prem(20);
+  }
+}
+
+.p-problem__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: prem(16);
+  @include mq(md) {
+    gap: prem(12);
+  }
+}
+
+.p-problem__figure {
+  width: 100%;
+  max-width: prem(210);
+  flex-shrink: 0;
+}
+
+.p-problem__figure img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.p-problem__text {
+  font-weight: $medium;
+  font-size: prem(18);
+  color: #475569;
+  text-align: center;
+  @include mq("md") {
+    font-size: prem(14);
+  }
+}
