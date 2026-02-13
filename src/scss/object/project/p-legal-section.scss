@@ -1,0 +1,137 @@
+@use "foundation" as *;
+
+.p-legal-section + .p-legal-section {
+  margin-top: prem(40);
+
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-legal-section__title {
+  font-weight: $bold;
+  font-size: prem(20);
+
+  @include mq(md) {
+    font-size: prem(18);
+  }
+}
+
+.p-legal-section__intro {
+  margin-top: prem(16);
+
+  @include mq(md) {
+    margin-top: prem(12);
+    font-size: prem(14);
+  }
+}
+
+.p-legal-section__outro {
+  margin-top: prem(16);
+
+  @include mq(md) {
+    margin-top: prem(12);
+    font-size: prem(14);
+  }
+}
+
+.p-legal-section__list {
+  margin-top: prem(16);
+  padding-left: prem(24);
+
+  @include mq(md) {
+    margin-top: prem(12);
+    padding-left: prem(20);
+    font-size: prem(14);
+  }
+}
+
+.p-legal-section__list--numbered {
+  list-style-type: decimal;
+}
+
+.p-legal-section__list--bullet {
+  list-style: none;
+  padding-left: 0;
+
+  > .p-legal-section__item {
+    position: relative;
+    padding-left: prem(20);
+
+    &::before {
+      content: "・";
+      position: absolute;
+      left: 0;
+    }
+
+    &.p-legal-section__item--no-marker {
+      padding-left: 0;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+.p-legal-section__list--alpha {
+  list-style-type: lower-alpha;
+}
+
+.p-legal-section__item + .p-legal-section__item {
+  margin-top: prem(12);
+
+  @include mq(md) {
+    margin-top: prem(10);
+  }
+}
+
+.p-legal-section__item-text {
+  display: block;
+}
+
+.p-legal-section__sublist {
+  margin-top: prem(12);
+  padding-left: prem(24);
+
+  @include mq(md) {
+    margin-top: prem(10);
+    padding-left: prem(20);
+  }
+}
+
+.p-legal-section__sublist--numbered {
+  list-style-type: decimal;
+}
+
+.p-legal-section__sublist--bullet {
+  list-style: none;
+  padding-left: 0;
+
+  > .p-legal-section__subitem {
+    position: relative;
+    padding-left: prem(20);
+
+    &::before {
+      content: "・";
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.p-legal-section__sublist--alpha {
+  list-style-type: lower-alpha;
+}
+
+.p-legal-section__subitem + .p-legal-section__subitem {
+  margin-top: prem(8);
+
+  @include mq(md) {
+    margin-top: prem(6);
+  }
+}
+
+.p-legal-section__subitem-text {
+  display: block;
+}

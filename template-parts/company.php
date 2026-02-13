@@ -10,15 +10,15 @@
                 <dl class="p-company__list">
                     <div class="p-company__row">
                         <dt class="p-company__term">会社名</dt>
-                        <dd class="p-company__desc">ー</dd>
+                        <dd class="p-company__desc">株式会社 APO</dd>
                     </div>
                     <div class="p-company__row">
                         <dt class="p-company__term">代表者</dt>
-                        <dd class="p-company__desc">ー</dd>
+                        <dd class="p-company__desc">代表取締役　飛田 正枝</dd>
                     </div>
                     <div class="p-company__row">
                         <dt class="p-company__term">所在地</dt>
-                        <dd class="p-company__desc">ー</dd>
+                        <dd class="p-company__desc">〒107-0061<br>東京都港区北青山 1-3-3 三橋ビル 3 階</dd>
                     </div>
                     <div class="p-company__row">
                         <dt class="p-company__term">事業内容</dt>

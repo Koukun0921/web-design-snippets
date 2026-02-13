@@ -23,13 +23,13 @@
               <a href="<?php page_path(); ?>">ホーム</a>
             </li>
             <li class="p-header__nav-item">
-              <a href="<?php page_path('price'); ?>">料金</a>
+              <a href="<?php page_path(); ?>#price">料金</a>
             </li>
             <li class="p-header__nav-item">
-              <a href="<?php page_path('faq'); ?>">faq</a>
+              <a href="<?php page_path(); ?>#faq">faq</a>
             </li>
             <li class="p-header__nav-item">
-              <a href="<?php page_path('about'); ?>">会社概要</a>
+              <a href="<?php page_path(); ?>#company">会社概要</a>
             </li>
             <li class="p-header__nav-item p-header__nav-item--login">
               <a href="<?php page_path('login'); ?>">ログイン</a>
@@ -51,13 +51,13 @@
                 <a href="<?php page_path(); ?>">ホーム</a>
               </li>
               <li class="p-header__drawer-item">
-                <a href="<?php page_path('price'); ?>">料金</a>
+                <a href="<?php page_path(); ?>#price">料金</a>
               </li>
               <li class="p-header__drawer-item">
-                <a href="<?php page_path('faq'); ?>">faq</a>
+                <a href="<?php page_path(); ?>#faq">faq</a>
               </li>
               <li class="p-header__drawer-item">
-                <a href="<?php page_path('about'); ?>">会社概要</a>
+                <a href="<?php page_path(); ?>#company">会社概要</a>
               </li>
               <li class="p-header__drawer-item p-header__drawer-item--login">
                 <a href="<?php page_path('login'); ?>">ログイン</a>

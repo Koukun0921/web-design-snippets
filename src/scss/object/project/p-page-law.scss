@@ -1,0 +1,130 @@
+@use "foundation" as *;
+
+.p-page-law {
+  padding: prem(160) 0;
+
+  @include mq(md) {
+    padding: prem(120) 0;
+  }
+}
+
+.p-page-law__list {
+  margin-top: prem(60);
+
+  @include mq(md) {
+    margin-top: prem(40);
+  }
+}
+
+.p-page-law__item {
+  display: flex;
+  gap: prem(16);
+  padding: prem(16) prem(20);
+  border-bottom: 1px solid rgba(#000, 0.1);
+
+  @include mq(md) {
+    flex-direction: column;
+    gap: prem(4);
+    padding: prem(12) 0;
+  }
+}
+
+.p-page-law__item-title {
+  flex: 0 0 prem(200);
+  font-weight: $bold;
+
+  @include mq(md) {
+    flex: none;
+    font-size: prem(14);
+  }
+}
+
+.p-page-law__item-description {
+  flex: 1;
+  min-width: 0;
+
+  @include mq(md) {
+    font-size: prem(14);
+  }
+}
+
+.p-page-law__item a {
+  color: $main-color;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.p-page-law__content {
+  margin-top: prem(40);
+
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-page-law__plans {
+  margin-top: prem(40);
+
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
+
+.p-page-law__plan {
+  padding: prem(24);
+  background-color: $sub-color;
+  border-radius: prem(8);
+
+  @include mq(md) {
+    padding: prem(16);
+  }
+}
+
+.p-page-law__plan + .p-page-law__plan {
+  margin-top: prem(24);
+
+  @include mq(md) {
+    margin-top: prem(20);
+  }
+}
+
+.p-page-law__plan-name {
+  font-weight: $bold;
+  font-size: prem(18);
+
+  @include mq(md) {
+    font-size: prem(16);
+  }
+}
+
+.p-page-law__plan-price {
+  margin-top: prem(12);
+
+  @include mq(md) {
+    margin-top: prem(10);
+    font-size: prem(14);
+  }
+}
+
+.p-page-law__plan-features {
+  margin-top: prem(12);
+  padding-left: prem(24);
+  font-size: prem(14);
+
+  @include mq(md) {
+    margin-top: prem(10);
+    padding-left: 0;
+  }
+}
+
+.p-page-law__plans-note {
+  margin: prem(12) 0 prem(40);
+  font-size: prem(14);
+
+  @include mq(md) {
+    margin: prem(12) 0 prem(32);
+  }
+}

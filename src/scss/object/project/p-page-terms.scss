@@ -1,0 +1,26 @@
+@use "foundation" as *;
+
+.p-page-terms {
+  padding: prem(160) 0;
+
+  @include mq(md) {
+    padding: prem(120) 0;
+  }
+}
+
+.p-page-terms__intro {
+  margin-top: prem(60);
+
+  @include mq(md) {
+    margin-top: prem(40);
+    font-size: prem(14);
+  }
+}
+
+.p-page-terms__content {
+  margin-top: prem(40);
+
+  @include mq(md) {
+    margin-top: prem(32);
+  }
+}
